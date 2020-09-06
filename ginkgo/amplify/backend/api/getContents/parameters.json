@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "getContents",
+    "schemaGraphql": "s3://ginkgo-20181231005330-deployment/amplify-appsync-files/schema.graphql.1548640789559",
+    "ResolverBucket": "ginkgo-20181231005330-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1548640789559"
+}

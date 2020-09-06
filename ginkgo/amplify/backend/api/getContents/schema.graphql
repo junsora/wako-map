@@ -1,0 +1,9 @@
+type Contents @model {
+  id: Int!
+  title: String!
+  description: String
+  latitude: Float
+  longitude: Float
+  imageUrl: String
+  typeId: Int
+}

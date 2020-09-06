@@ -1,0 +1,128 @@
+type Contents {
+  id: Int!
+  title: String!
+  description: String
+  latitude: Float
+  longitude: Float
+  imageUrl: String
+  typeId: Int
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelContentsConnection {
+  items: [Contents]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelContentsFilterInput {
+  id: ModelIntFilterInput
+  title: ModelStringFilterInput
+  description: ModelStringFilterInput
+  latitude: ModelFloatFilterInput
+  longitude: ModelFloatFilterInput
+  imageUrl: ModelStringFilterInput
+  typeId: ModelIntFilterInput
+  and: [ModelContentsFilterInput]
+  or: [ModelContentsFilterInput]
+  not: ModelContentsFilterInput
+}
+
+type Query {
+  getContents(id: ID!): Contents
+  listContentss(filter: ModelContentsFilterInput, limit: Int, nextToken: String): ModelContentsConnection
+}
+
+input CreateContentsInput {
+  id: ID
+  title: String!
+  description: String
+  latitude: Float
+  longitude: Float
+  imageUrl: String
+  typeId: Int
+}
+
+input UpdateContentsInput {
+  id: Int!
+  title: String
+  description: String
+  latitude: Float
+  longitude: Float
+  imageUrl: String
+  typeId: Int
+}
+
+input DeleteContentsInput {
+  id: ID
+}
+
+type Mutation {
+  createContents(input: CreateContentsInput!): Contents
+  updateContents(input: UpdateContentsInput!): Contents
+  deleteContents(input: DeleteContentsInput!): Contents
+}
+
+type Subscription {
+  onCreateContents: Contents @aws_subscribe(mutations: ["createContents"])
+  onUpdateContents: Contents @aws_subscribe(mutations: ["updateContents"])
+  onDeleteContents: Contents @aws_subscribe(mutations: ["deleteContents"])
+}

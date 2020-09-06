@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tpF-sY-mFp">
+            <objects>
+                <viewController storyboardIdentifier="ContentsDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="GRD-L8-ouP" customClass="ContentsDetailViewController" customModule="ginkgo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EjC-xE-C8H"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTc-vJ-gok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Jh-Xj-n5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-Wy-CTO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5K-bX-Pd6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="602.33333333333337"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-IB-2xT">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="xEj-mI-6Zb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contents Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="345" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-RR-m49">
+                                                <rect key="frame" x="15" y="260" width="345" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-Vz-6Lx">
+                                                <rect key="frame" x="15" y="294" width="345" height="248.33333333333337"/>
+                                                <string key="text">Contents Detail. This Contents is the best of eating space. Big space, classic music, good comunication and clean. Because it is my best spot, please go once. 
+Recommended items are original blended coffee with free choice of donut and Colombian beans.  Kids' space is also equipped, so even if there are young children, you can play with building blocks and slides, so it is very easy to spend with parents and children</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="f8e-Vz-6Lx" firstAttribute="top" secondItem="Vy9-RR-m49" secondAttribute="bottom" constant="10" id="1XX-Ol-agW"/>
+                                            <constraint firstItem="7Zp-IB-2xT" firstAttribute="leading" secondItem="m5K-bX-Pd6" secondAttribute="leading" id="CW2-4E-vmV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vy9-RR-m49" secondAttribute="trailing" constant="15" id="CsD-2i-vb8"/>
+                                            <constraint firstItem="7Zp-IB-2xT" firstAttribute="top" secondItem="m5K-bX-Pd6" secondAttribute="top" id="J6X-y9-I12"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Zp-IB-2xT" secondAttribute="trailing" id="MEh-Qq-gBS"/>
+                                            <constraint firstItem="Vy9-RR-m49" firstAttribute="leading" secondItem="m5K-bX-Pd6" secondAttribute="leading" constant="15" id="Sie-8K-ZvA"/>
+                                            <constraint firstItem="Vy9-RR-m49" firstAttribute="top" secondItem="7Zp-IB-2xT" secondAttribute="bottom" constant="10" id="VBt-zi-t9t"/>
+                                            <constraint firstAttribute="trailing" secondItem="f8e-Vz-6Lx" secondAttribute="trailing" constant="15" id="bky-qq-uIG"/>
+                                            <constraint firstAttribute="bottom" secondItem="f8e-Vz-6Lx" secondAttribute="bottom" constant="60" id="i1R-dh-4uI"/>
+                                            <constraint firstItem="f8e-Vz-6Lx" firstAttribute="leading" secondItem="m5K-bX-Pd6" secondAttribute="leading" constant="15" id="kfx-ZD-ad0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="m5K-bX-Pd6" secondAttribute="trailing" id="BrE-Jz-vRa"/>
+                                    <constraint firstAttribute="bottom" secondItem="m5K-bX-Pd6" secondAttribute="bottom" id="MO4-Wh-Jbm"/>
+                                    <constraint firstItem="m5K-bX-Pd6" firstAttribute="leading" secondItem="UCV-Wy-CTO" secondAttribute="leading" id="XYh-Qd-iNi"/>
+                                    <constraint firstAttribute="bottom" secondItem="m5K-bX-Pd6" secondAttribute="bottom" id="d91-tZ-Vuf"/>
+                                    <constraint firstItem="m5K-bX-Pd6" firstAttribute="centerX" secondItem="UCV-Wy-CTO" secondAttribute="centerX" id="fsP-Ts-Hjg"/>
+                                    <constraint firstItem="m5K-bX-Pd6" firstAttribute="top" secondItem="UCV-Wy-CTO" secondAttribute="top" id="z5z-tH-W5C"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BTc-vJ-gok" firstAttribute="top" secondItem="UCV-Wy-CTO" secondAttribute="bottom" id="Wk3-le-9IH"/>
+                            <constraint firstItem="UCV-Wy-CTO" firstAttribute="top" secondItem="EjC-xE-C8H" secondAttribute="bottom" id="g9l-Vq-SSD"/>
+                            <constraint firstItem="UCV-Wy-CTO" firstAttribute="leading" secondItem="4Jh-Xj-n5Y" secondAttribute="leading" id="hNY-xa-O70"/>
+                            <constraint firstAttribute="trailing" secondItem="UCV-Wy-CTO" secondAttribute="trailing" id="w33-VU-9dT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="MxV-Yt-FPb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="ContentsImageView" destination="7Zp-IB-2xT" id="e7C-Kp-eCY"/>
+                        <outlet property="contentsDetailLabel" destination="f8e-Vz-6Lx" id="lNk-4V-GBr"/>
+                        <outlet property="contentsImageView" destination="7Zp-IB-2xT" id="2JO-FL-7dJ"/>
+                        <outlet property="contentsTitelLabel" destination="Vy9-RR-m49" id="6O4-FK-lVf"/>
+                        <outlet property="contentsView" destination="m5K-bX-Pd6" id="k92-HP-dy3"/>
+                        <outlet property="scrollView" destination="UCV-Wy-CTO" id="Zgz-es-7LM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn0-vs-Fj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.739130434782609" y="98.233695652173921"/>
+        </scene>
+    </scenes>
+</document>

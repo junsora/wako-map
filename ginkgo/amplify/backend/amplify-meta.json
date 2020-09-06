@@ -1,0 +1,44 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "ginkgo-20181231005330-authRole",
+			"UnauthRoleArn": "arn:aws:iam::015278662472:role/ginkgo-20181231005330-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::015278662472:role/ginkgo-20181231005330-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "ginkgo-20181231005330-deployment",
+			"UnauthRoleName": "ginkgo-20181231005330-unauthRole",
+			"StackName": "ginkgo-20181231005330",
+			"StackId": "arn:aws:cloudformation:us-east-2:015278662472:stack/ginkgo-20181231005330/0eddd3d0-0c4b-11e9-96d7-02649197f7a0"
+		}
+	},
+	"auth": {
+		"ginkgo": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/ginkgo-20181231005330-deployment/amplify-cfn-templates/auth/ginkgo-cloudformation-template.yml",
+				"logicalId": "authginkgo"
+			},
+			"lastPushTimeStamp": "2019-01-07T15:35:29.032Z",
+			"output": {
+				"AppClientSecret": "107bar73sou7ug6atrq9losmdg12o8obsgtvavlpnj16141acn98",
+				"UserPoolId": "us-east-2_eJGFjxfyK",
+				"AppClientIDWeb": "21bs96ao1qaam1kn04knamgnga",
+				"AppClientID": "bboj7v76pl1b5qli3uujnpahk",
+				"IdentityPoolId": "us-east-2:81ea5149-768a-4f0d-aef0-52110ed475b6",
+				"IdentityPoolName": "ginkgo_identitypool",
+				"UserPoolName": "ginkgo_userpool"
+			},
+			"lastPushDirHash": "O24phxnachjJBIqxBO+knK+Q+wI="
+		}
+	},
+	"api": {
+		"getContents": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY"
+			}
+		}
+	}
+}
